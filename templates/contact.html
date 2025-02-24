@@ -1,163 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        /* Sticky Navbar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            background-color: #343a40;
-        }
-        /* Contact Section */
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 0;
-        }
-        .contact-info {
-            flex: 1;
-            padding: 30px;
-            text-align: center;
-        }
-        .contact-info h2 {
-            font-weight: bold;
-            font-size: 40px;
-        }
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .contact-icons a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 22px;
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-        .contact-icons a i {
-            font-size: 28px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .contact-icons a:hover {
-            color: #6a5acd;
-        }
-        .contact-icons a:hover i {
-            transform: scale(1.2);
-        }
-        /* Contact Form */
-        .contact-form {
-            flex: 1;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-        }
-        .contact-form h2 {
-            color: #6a5acd;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .form-control {
-            border-radius: 5px;
-        }
-        .btn-custom {
-            background-color: #6a5acd;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 100%;
-            padding: 10px;
-            border: none;
-        }
-        .btn-custom:hover {
-            background-color: #5a4dbc;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: #343a40;
+    }
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+    }
+    .contact-info {
+      flex: 1;
+      padding: 30px;
+      text-align: center;
+    }
+    .contact-info h2 {
+      font-weight: bold;
+      font-size: 40px;
+    }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-icons a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+    .contact-icons a i {
+      font-size: 28px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .contact-icons a:hover {
+      color: #6a5acd;
+    }
+    .contact-icons a:hover i {
+      transform: scale(1.2);
+    }
+    /* Contact Form */
+    .contact-form {
+      flex: 1;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact-form h2 {
+      color: #6a5acd;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+    .btn-custom {
+      background-color: #6a5acd;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #5a4dbc;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 576px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 30px 0;
+      }
+      .contact-info, .contact-form {
+        flex: 1 0 100%;
+        padding: 15px;
+      }
+      .contact-info h2 {
+        font-size: 32px;
+      }
+      .contact-icons a {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Project & Skills</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Project & Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Contact Section -->
-    <div class="container contact-container">
-        <!-- Left Side: Contact Info -->
-        <div class="contact-info">
-            <h2>Contact</h2>
-            <p>Get in touch with me via social media or email.</p>
-            <div class="contact-icons">
-                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.kaggle.com/" target="_blank"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
-                <a href="mailto:your-email@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Right Side: Contact Form -->
-        <div class="contact-form">
-            <h2>Let's Connect</h2>
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Enter your name">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Mobile Number</label>
-                    <input type="text" class="form-control" placeholder="Enter your mobile number">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Convey the message</label>
-                    <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-custom">Send Message</button>
-            </form>
-        </div>
+  <!-- Contact Section -->
+  <div class="container contact-container">
+    <!-- Left Side: Contact Info -->
+    <div class="contact-info">
+      <h2>Contact</h2>
+      <p>Get in touch with me via social media or email.</p>
+      <div class="contact-icons">
+        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.kaggle.com/" target="_blank"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
+        <a href="mailto:your-email@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form">
+      <h2>Let's Connect</h2>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mobile Number</label>
+          <input type="text" class="form-control" placeholder="Enter your mobile number">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Convey the message</label>
+          <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-custom">Send Message</button>
+      </form>
+    </div>
+  </div>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
