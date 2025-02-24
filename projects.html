@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects</title>
+    <!-- Bootstrap CSS & FontAwesome for Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .project-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .project-card img {
+            border-radius: 10px 10px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-blog {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-blog:hover {
+            background-color: #0056b3;
+        }
+        .btn-source {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        .btn-source:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 20px;
+            background-color: white;
+        }
+        .skills-section h3 {
+            margin-bottom: 15px;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            font-size: 16px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: left; /* Align items to the left */
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+        .skills-list li i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .skills-list li:hover {
+            background: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+        .skills-list li:hover i {
+            color: white;
+        }
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.skills-section {
+    position: sticky;
+    top: 100px; /* Adjust based on navbar height */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> 
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Projects Section (70%) -->
+            <div class="col-md-8">
+                <h2 class="text-center fw-bold mb-4">Projects</h2>
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="./images/clustering-project.png" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Online Retail Customer Analysis Using RFM and K-Means Clustering</h5>
+                                <p>This project involves analyzing an online retail dataset by applying RFM (Recency, Frequency, Monetary) analysis to segment customers based on their purchasing behavior. After data exploration and cleaning, K-Means clustering is used to categorize customers into different groups. The Elbow Method and Silhouette Score help evaluate and determine the optimal number of clusters for effective customer segmentation.</p>
+                                <a href="https://dev.to/sowmiya_siva_b02c3773f9f5/customer-segmentation-using-rfm-analysis-in-online-retail-2fp3" class="btn btn-blog">Blog Post</a>
+                                <a href="https://github.com/Ssowmiya25/online-retail-data-clustering-using-RFM-analysis" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/mcq.png" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="fw-bold">AI-Powered MCQ Generator Using NLP and LSTM</h5>
+                                <p>An AI-powered MCQ generator leverages Natural Language Processing (NLP) and Long Short-Term Memory (LSTM) networks to automatically create multiple-choice questions. It preprocesses text using spaCy, extracts key nouns, and generates distractors using word embeddings. The model enhances educational assessments by automating question creation with high accuracy and relevance. This approach simplifies content generation for educators and e-learning platforms.
+                                </p>
+                                <a href="https://dev.to/sowmiya_siva_b02c3773f9f5/ai-powered-mcq-generator-using-nlp-and-lstm-1h63" class="btn btn-blog">Blog Post</a>
+                                <a href="https://github.com/Ssowmiya25/mcqs-generator" class="btn btn-source">Source Code</a>
+                                <a href="#" class="btn btn-blog">View Online</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/Student.png" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Student Performance Analysis</h5>
+                                <p>The Student Performance Analyzer is a machine learning-based project designed to predict student scores based on various factors like parental education, lunch type, and test preparation. It includes data preprocessing, exploratory data analysis (EDA), and model training to improve prediction accuracy. The project features a Flask-based web application where users can input student details and receive predicted scores. Its structured pipeline ensures efficient data ingestion, transformation, and deployment.
+                                </p>
+                                <a href="https://dev.to/sowmiya_siva_b02c3773f9f5/student-performance-analysis-226" class="btn btn-blog">Blog Post</a>
+                                <a href="https://github.com/Ssowmiya25/STUDENT-PERFORMANCE-PREDICTION-USING-REGRESSION-TECHNIQUE---ML---PROJECT-" class="btn btn-source">Source Code</a>
+                                <a href="#" class="btn btn-blog">View Online</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Project 3</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-blog">Blog Post</a>
+                                <a href="#" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Project 3</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-blog">Blog Post</a>
+                                <a href="#" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Project 3</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-blog">Blog Post</a>
+                                <a href="#" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Project 3</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-blog">Blog Post</a>
+                                <a href="#" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6">
+                        <div class="card project-card text-center">
+                            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Project 3</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-blog">Blog Post</a>
+                                <a href="#" class="btn btn-source">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section (30%) -->
+            <div class="col-md-4">
+                <div class="skills-section">
+                    <h3 class="fw-bold">Skills</h3>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fas fa-cubes"></i> NumPy</li>
+                        <li><i class="fas fa-database"></i> Pandas</li>
+                        <li><i class="fas fa-chart-bar"></i> Matplotlib</li>
+                        <li><i class="fas fa-table"></i> Excel</li>
+                        <li><i class="fas fa-chart-pie"></i> Seaborn</li>
+                        <li><i class="fas fa-robot"></i> Machine Learning</li>
+                        <li><i class="fas fa-brain"></i> Scikit-learn</li>
+                        <li><i class="fas fa-microchip"></i> Deep Learning</li>
+                        <li><i class="fas fa-language"></i> NLP</li>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-chart-line"></i> Power BI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
